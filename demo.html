@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/Week-2_Axie_Tracker/Css/global.css" />
+    <link rel="stylesheet" href="/Week-2_Axie_Tracker/Css/styleguide.css" />
+    <link rel="stylesheet" href="demo.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+  </head>
+  <body>
+    <div class="frame-Sign">
+      <div class="text-wrapper">Add New Account</div>
+      <div class="div">
+        <div class="div-2">
+          <div class="div-3">
+            <div class="div-4">
+              <!-- Name Input Field -->
+              <div class="text-field">
+                <label for="name" class="text-wrapper-2">Name</label>
+                <div class="input-container">
+                  <input type="text" id="name" name="name" placeholder="Name" />
+                </div>
+              </div>
+              <!-- Email Input Field -->
+              <div class="text-field">
+                <label for="email" class="text-wrapper-2">Email</label>
+                <div class="div-wrapper">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="group">
+              <div class="div-5">
+                <!-- Password Input Field -->
+                <div class="text-field">
+                  <label for="password" class="text-wrapper-2">Password:</label>
+                  <div class="input-container-2">
+                    <input
+                      class="password-input"
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="Password"
+                    />
+                    <div class="eye-btn">
+                      <i class="uil uil-eye"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- Confirm Password Input Field -->
+                <div class="text-field">
+                  <label for="confirmPassword" class="text-wrapper-2"
+                    >Confirm Password:</label
+                  >
+                  <div class="input-container-2">
+                    <input
+                      class="confirm-password"
+                      type="password"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      placeholder="confirmPassword"
+                    />
+                    <div class="eye-btn2">
+                      <i class="uil uil-eye-slash"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-6">
+                <!-- Organization Input Field -->
+                <div class="text-field">
+                  <label for="organization" class="text-wrapper-2"
+                    >Organisation</label
+                  >
+                  <div class="div-wrapper">
+                    <input
+                      type="text"
+                      id="organization"
+                      name="organization"
+                      placeholder="Organisation"
+                    />
+                  </div>
+                </div>
+                <!-- Role Input Field -->
+                <div class="text-field-2">
+                  <label class="text-wrapper-2">Role</label>
+                  <div class="input-container-3">
+                    <div class="div-7">
+                      <div class="div-8">
+                        <label>
+                          <select name="role" id="role">
+                            <option value="Scholar">Scholar</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Marketing-Manager">
+                              Marketing-Manager
+                            </option>
+                            <option value="Project-Manager">
+                              Project-Manager
+                            </option>
+                          </select>
+                        </label>
+                        <img
+                          class="combined-shape"
+                          src="img/combined-shape.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Profile Summary Text Area -->
+            <div class="text-field-3">
+              <label for="profileSummary" class="text-wrapper-2"
+                >Profile summary:</label
+              >
+              <div class="axie-infinity-is-a-wrapper">
+                <textarea id="profileSummary" name="profileSummary"> </textarea>
+              </div>
+            </div>
+          </div>
+          <a class="p" href="#">Already have an account ?</a>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="button">
+          <div class="track-account">Create account</div>
+        </button>
+      </div>
+    </div>
+    <script>
+      const textInputs = document.querySelectorAll("input");
+
+      textInputs.forEach((textInput) => {
+        textInput.addEventListener("focus", () => {
+          let parent = textInput.parentNode;
+          parent.classList.add("active");
+        });
+      });
+
+      /*pwd show/hide */
+      const passwordInput = document.querySelector(".password-input");
+      const eyeBtn = document.querySelector(".eye-btn");
+
+      eyeBtn.addEventListener("click", () => {
+        if (passwordInput.type == "password") {
+          passwordInput.type = "text";
+          eyeBtn.innerHTML = "<i class='uil-eye'></i>";
+        } else {
+          passwordInput.type = "password";
+          eyeBtn.innerHTML = "<i class='uil-eye-slash'></i>";
+        }
+      });
+    </script>
+    <script>
+      const textInputs2 = document.querySelectorAll("input");
+
+      textInputs2.forEach((textInput) => {
+        textInput.addEventListener("focus", () => {
+          let parent = textInput.parentNode;
+          parent.classList.add("active");
+        });
+      });
+
+      /*pwd show/hide */
+      const passwordInput2 = document.querySelector(".confirm-password");
+      const eyeBtn2 = document.querySelector(".eye-btn2");
+
+      eyeBtn2.addEventListener("click", () => {
+        if (passwordInput2.type == "password") {
+          passwordInput2.type = "text";
+          eyeBtn2.innerHTML = "<i class='uil-eye'></i>";
+        } else {
+          passwordInput2.type = "password";
+          eyeBtn2.innerHTML = "<i class='uil-eye-slash'></i>";
+        }
+      });
+    </script>
+  </body>
+</html>
